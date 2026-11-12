@@ -6,6 +6,7 @@ def calculate_discount(price, discount_percent):
 
     Returns price * (1 - discount_percent / 100).
     """
+    discount_percent = min(discount_percent, 100)
     discount = price * (discount_percent / 100)
     return price - discount
 
