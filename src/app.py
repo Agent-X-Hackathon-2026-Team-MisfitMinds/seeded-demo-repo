@@ -6,8 +6,8 @@ def calculate_discount(price, discount_percent):
 
     Returns price * (1 - discount_percent / 100).
     """
-    discount = price * (discount_percent / 100)
-    return price - discount
+    discount = price * (min(discount_percent, 100) / 100)
+    return max(0.0, price - discount)
 
 
 def validate_age(age):
