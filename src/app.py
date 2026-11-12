@@ -12,7 +12,7 @@ def calculate_discount(price, discount_percent):
 
 def validate_age(age):
     """Return True if age is between 18 and 65 inclusive."""
-    if age < 18 or age >= 65:
+    if age is None or age < 18 or age >= 65:
         return False
     return True
 
